@@ -1,0 +1,59 @@
+{
+  "name": "boundless-commerce-components",
+  "version": "1.0.0",
+  "author": "Kirill Zhirnov <ekvixgroup@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf ./dist && npx rollup --config rollup.prod.js --bundleConfigAsCjs",
+    "watch": "rm -rf ./dist && npx rollup --config rollup.prod.js --bundleConfigAsCjs --watch",
+    "lint": "npx eslint --ext .ts --ext .tsx ./src/"
+  },
+  "peerDependencies": {
+    "boundless-api-client": "^0.2.1",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.3",
+    "@babel/preset-env": "^7.23.3",
+    "@babel/preset-react": "^7.23.3",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-json": "^6.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@types/node": "18",
+    "@types/react": "^18.2.37",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
+    "boundless-api-client": "^0.2.1",
+    "eslint": "^8.54.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "rollup": "^4.5.0",
+    "rollup-plugin-import-css": "^3.3.5",
+    "rollup-plugin-scss": "^4.0.0",
+    "sass": "^1.69.5",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
+  },
+  "browserslist": [
+    "last 3 chrome versions",
+    "last 3 chromeandroid versions",
+    "last 3 firefox versions",
+    "last 3 opera versions",
+    "last 2 edge versions",
+    "safari >= 10",
+    "ios >= 10"
+  ],
+  "dependencies": {
+    "clsx": "^2.0.0",
+    "currency.js": "^2.0.4"
+  }
+}

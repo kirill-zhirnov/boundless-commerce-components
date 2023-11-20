@@ -1,0 +1,21 @@
+.bdl-products {
+	display: flex;
+	flex-wrap: wrap;
+
+	@include products-gap-per-row();
+	@include media-breakpoint-up(sm) {
+		@include products-gap-per-row('sm-');
+	}
+	@include media-breakpoint-up(md) {
+		@include products-gap-per-row('md-');
+	}
+	@include media-breakpoint-up(lg) {
+		@include products-gap-per-row('lg-');
+	}
+	@include media-breakpoint-up(xl) {
+		@include products-gap-per-row('xl-');
+	}
+	@include media-breakpoint-up(xxl) {
+		@include products-gap-per-row('xxl-');
+	}
+}

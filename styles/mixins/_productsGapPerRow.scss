@@ -1,0 +1,13 @@
+@mixin products-gap-per-row ($prefix: '') {
+	@each $gapKey, $gapValue in $products-gaps {
+		@each $rowKey, $rowValue in $products-per-row {
+			&_#{$prefix}gap-#{$gapKey}_per-row-#{$rowValue} {
+				gap: #{$gapValue};
+
+				.bdl-product {
+					width: calc((100% - ((#{$rowValue} - 1) * #{$gapValue})) / #{$rowValue});
+				}
+			}
+		}
+	}
+}
