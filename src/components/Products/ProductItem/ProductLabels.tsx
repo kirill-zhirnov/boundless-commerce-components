@@ -7,10 +7,10 @@ export default function ProductLabels({labels, className}: { labels: ILabel[], c
 		return null;
 
 	return (
-		<ul className={clsx('bdl-product__labels list-unstyled', className)}>
+		<ul className={clsx('bdl-labels bdl-list-unstyled', className)}>
 			{labels.map(({label_id, title, color, text_color, icon}) =>
 				<li key={label_id}
-					className={'bdl-product__label'}
+					className={'bdl-labels__item'}
 					style={{color: text_color, backgroundColor: color}}
 				>
 					{title}

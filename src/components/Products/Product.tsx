@@ -1,12 +1,12 @@
 import React, {ReactNode} from 'react';
-import {IProduct} from 'boundless-api-client';
+import {BoundlessClient, IProduct} from 'boundless-api-client';
 import clsx from 'clsx';
 import {IProductLink} from '../../@types/products';
 import ProductListImage from './ProductItem/ProductListImage';
 import ProductLink from './ProductItem/ProductLink';
 import ProductPrice from './ProductItem/ProductPrice';
 
-export default function Product({product, className, productLink, components}: IProductProps) {
+export default function Product({product, className, link, components, apiClient}: IProductProps) {
 	return (
 		<div
 			className={clsx('bdl-product', {
@@ -17,11 +17,11 @@ export default function Product({product, className, productLink, components}: I
 			<div className='bdl-product__wrapper'>
 				{components?.image
 					? components?.image
-					: <ProductListImage product={product} productLink={productLink}/> }
+					: <ProductListImage product={product} link={link} apiClient={apiClient}/> }
 				{components?.title
 					? components?.title
 					: <h4 className='bdl-product__title'>
-						<ProductLink link={productLink}>
+						<ProductLink link={link}>
 							<span
 								// color={typography.color}
 							>
@@ -44,10 +44,11 @@ export default function Product({product, className, productLink, components}: I
 export interface IProductProps {
 	product: IProduct;
 	className?: string;
-	productLink?: IProductLink;
+	link?: IProductLink;
 	components?: {
 		image?: ReactNode,
 		title?: ReactNode,
 		price?: ReactNode,
-	}
+	},
+	apiClient?: BoundlessClient
 }

@@ -4,7 +4,7 @@ import {getPriceForTpl} from '../../../lib/product';
 import useFormatCurrency from '../../../hooks/useFormatCurrency';
 import clsx from 'clsx';
 
-export default function ProductPrice({price, className}: {price: IProductPrice, className?: string}) {
+export default function ProductPrice({price, className, textFrom = 'From:'}: {price: IProductPrice, className?: string, textFrom?: string}) {
 	const tplPrice = getPriceForTpl(price);
 	const {formatCurrency} = useFormatCurrency();
 
@@ -13,11 +13,11 @@ export default function ProductPrice({price, className}: {price: IProductPrice, 
 	}
 
 	return (
-		<div className={className}>
-			{tplPrice.isFrom && <span className='from'>From:</span>}
-			{tplPrice.oldPrice && <span className='old'>{formatCurrency(tplPrice.oldPrice)}</span>}
+		<div className={clsx('bdl-price', className)}>
+			{(tplPrice.isFrom && textFrom) && <span className='bdl-price__from'>{textFrom}</span>}
+			{tplPrice.oldPrice && <span className='bdl-price__old'>{formatCurrency(tplPrice.oldPrice)}</span>}
 			<span
-				className={clsx('current', {'has-old': tplPrice.oldPrice})}
+				className={clsx('bdl-price__current', {'bdl-price__current_has-old': tplPrice.oldPrice})}
 			>
 				{formatCurrency(tplPrice.price)}
 			</span>

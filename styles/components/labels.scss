@@ -1,0 +1,38 @@
+.bdl-labels {
+	display: flex;
+	justify-content: flex-start;
+	margin: 0;
+	padding: 0;
+	gap: 10px;
+	//position: absolute;
+
+	&_column {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	&_small {
+		gap: 6px;
+		.bdl-labels__item {
+			font-size: 0.65rem;
+			padding: 2px;
+			@include media-breakpoint-up(sm) {
+				font-size: 0.75rem;
+				padding: 5px;
+			}
+		}
+	}
+
+	&_rounded {
+		.bdl-labels__item {
+			border-radius: 4px;
+		}
+	}
+
+	&__item {
+		display: inline-block;
+
+		//padding: 4px 10px 5px;
+		padding: 5px 8px;
+	}
+}

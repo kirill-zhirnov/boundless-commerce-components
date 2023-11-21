@@ -9,7 +9,7 @@
     ],
     "jsx": "react",
 		"declaration": true,
-		"declarationDir": ".",
+		"declarationDir": "dist",
     "sourceMap": true,
     "outDir": "dist",
     "removeComments": false,

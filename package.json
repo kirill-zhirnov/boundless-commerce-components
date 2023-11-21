@@ -5,7 +5,6 @@
   "license": "MIT",
   "private": false,
   "main": "./dist/index.js",
-  "module": "./dist/index.esm.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
@@ -16,8 +15,9 @@
     "lint": "npx eslint --ext .ts --ext .tsx ./src/"
   },
   "peerDependencies": {
-    "boundless-api-client": "^0.2.1",
-    "react": "^18.2.0"
+    "@types/react": ">=18.2.0",
+    "boundless-api-client": ">=0.2.2",
+    "react": ">=18.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.23.0",
@@ -29,12 +29,13 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.5",
     "@types/node": "18",
-    "@types/react": "^18.2.37",
+    "@types/react": "^18.2.38",
     "@typescript-eslint/eslint-plugin": "^6.11.0",
     "@typescript-eslint/parser": "^6.11.0",
-    "boundless-api-client": "^0.2.1",
+    "boundless-api-client": "^0.2.2",
     "eslint": "^8.54.0",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "react": "^18.2.0",
     "rollup": "^4.5.0",
     "rollup-plugin-import-css": "^3.3.5",
     "rollup-plugin-scss": "^4.0.0",

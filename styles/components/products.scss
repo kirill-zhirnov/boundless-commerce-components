@@ -1,6 +1,7 @@
 .bdl-products {
 	display: flex;
 	flex-wrap: wrap;
+	align-items: stretch;
 
 	@include products-gap-per-row();
 	@include media-breakpoint-up(sm) {
