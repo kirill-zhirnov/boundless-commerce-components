@@ -5,8 +5,9 @@ import {IProductLink} from '../../@types/products';
 import ProductListImage from './ProductItem/ProductListImage';
 import ProductLink from './ProductItem/ProductLink';
 import ProductPrice from './ProductItem/ProductPrice';
+import {IBasicSettings} from '../../@types/settings';
 
-export default function Product({product, className, link, components, apiClient}: IProductProps) {
+export default function Product({product, className, link, components, apiClient, settings}: IProductProps) {
 	return (
 		<div
 			className={clsx('bdl-product', {
@@ -33,7 +34,12 @@ export default function Product({product, className, link, components, apiClient
 				{components?.price
 					? components?.price
 					: <div className='bdl-product__offer'>
-						{product.price && <ProductPrice price={product.price} className={'bdl-product__price'} />}
+						{product.price &&
+						<ProductPrice
+							price={product.price}
+							settings={settings}
+							className={'bdl-product__price'}
+						/>}
 					</div>
 				}
 			</div>
@@ -50,5 +56,6 @@ export interface IProductProps {
 		title?: ReactNode,
 		price?: ReactNode,
 	},
-	apiClient?: BoundlessClient
+	apiClient?: BoundlessClient,
+	settings?: IBasicSettings
 }

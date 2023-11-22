@@ -1,0 +1,25 @@
+.bdl-vw-item {
+	display: flex;
+	justify-content: flex-start;
+
+	&__img-wrapper {
+		flex-shrink: 0;
+		margin: 0 5px 0 0;
+		width: 60px;
+
+		.bdl-no-image__bg {
+			background-size: 30px;
+		}
+	}
+
+	&__img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+
+	&__variant {
+		color: var(--bdl-product-muted-color);
+		margin: 5px 0 0 0;
+	}
+}

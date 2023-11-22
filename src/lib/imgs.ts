@@ -1,7 +1,7 @@
 import {BoundlessClient, TThumbRatio, IProductListImage} from 'boundless-api-client';
 import {IProductsListImg} from '../@types/products';
 
-export function getProductsListImg(
+export function getProductImg(
 	apiClient: BoundlessClient,
 	image: Pick<IProductListImage, 'width' | 'height' | 'path'>,
 	maxSize: number,

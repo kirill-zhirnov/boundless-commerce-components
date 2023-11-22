@@ -5,13 +5,13 @@ import {BoundlessClient, TThumbRatio} from 'boundless-api-client';
 import {IProduct} from 'boundless-api-client';
 import ProductLink from './ProductLink';
 import {IProductLink} from '../../../@types/products';
-import {getProductsListImg} from '../../../lib/imgs';
+import {getProductImg} from '../../../lib/imgs';
 
 export default function ProductListImage({product, link, apiClient, maxSize = 300}: ProductListImageProps) {
 	const img = product.images?.find(({is_default}) => is_default);
 	let src, width, height;
 	if (img && apiClient) {
-		const result = getProductsListImg(apiClient, img, maxSize, TThumbRatio['1-1']);
+		const result = getProductImg(apiClient, img, maxSize, TThumbRatio['1-1']);
 		src = result.src;
 		width = result.width;
 		height = result.height;
