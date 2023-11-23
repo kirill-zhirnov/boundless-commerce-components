@@ -1,0 +1,39 @@
+.bdl-product-attrs {
+	&__group {
+		&:not(:last-child) {
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	&__group-header {
+		font-size: 1.125rem;
+		margin-bottom: 1.2rem;
+	}
+
+	&__item {
+		align-items: flex-start;
+		display: flex;
+		gap: 20px;
+		margin-bottom: 0.7rem;
+	}
+
+	&__brand-img {
+		display: block;
+		height: auto;
+		margin-right: 5px;
+		max-width: 100px;
+	}
+
+	&__item-value {
+		margin: 0;
+		&_brand {
+			align-items: flex-start;
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+
+	&__item-name {
+		font-weight: normal;
+	}
+}

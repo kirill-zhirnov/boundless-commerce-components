@@ -2,7 +2,7 @@ import {useCallback} from 'react';
 import currency, {Options} from 'currency.js';
 import {IBasicSettings} from '../@types/settings';
 
-export default function useFormatCurrency({settings}: {settings?: IBasicSettings}) {
+export default function useFormatCurrency({settings}: {settings?: IBasicSettings} = {}) {
 	const formatCurrency = useCallback((amount: number|string) => {
 		amount = Number(amount);
 

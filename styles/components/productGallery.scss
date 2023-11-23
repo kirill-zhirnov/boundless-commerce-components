@@ -1,0 +1,35 @@
+.bdl-product-gallery {
+	display: flex;
+	flex-direction: column;
+
+	&__thumbs {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		margin: 0;
+	}
+
+	&__thumb {
+		margin: 0;
+	}
+
+	&__link {
+		display: block;
+
+		&_small {
+			border: 2px solid transparent;
+			padding: 4px;
+			max-width: 100px;
+		}
+
+		&_active {
+			border-color: var(--bdl-product-gallery-active-color);
+		}
+	}
+
+	&__img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+}

@@ -8,6 +8,13 @@ import ProductLabels from './components/Products/ProductItem/ProductLabels';
 import {IBasicSettings} from './@types/settings';
 import useFormatCurrency from './hooks/useFormatCurrency';
 import VwItem from './components/VwItem';
+import {IPriceForTpl} from './@types/products';
+import {getPriceForTpl} from './lib/product';
+import ProductAttrs from './components/Products/ProductItem/ProductAttrs';
+import ManufacturerCharacteristic from './components/Products/ProductItem/ProductAttrs/ManufacturerCharacteristic';
+import ImgThumb from './components/ImgThumb';
+import SizeAndWeight from './components/Products/ProductItem/ProductAttrs/SizeAndWeight';
+import NoImage from './components/NoImage';
 
 export {
 	Products,
@@ -16,6 +23,13 @@ export {
 	ProductPrice,
 	ProductLabels,
 	VwItem,
+	ProductAttrs,
+	ManufacturerCharacteristic,
+	ImgThumb,
+	NoImage,
+	SizeAndWeight,
+	useFormatCurrency,
 	IBasicSettings,
-	useFormatCurrency
+	IPriceForTpl,
+	getPriceForTpl
 };

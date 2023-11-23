@@ -13,3 +13,16 @@ export interface IProductsListImg {
 	height?: number;
 	blurSrc?: string;
 }
+
+export interface IPriceForTpl {
+	price: number|null,
+	oldPrice?: number|null,
+	isFrom?: boolean
+}
+
+export interface ISizeAndWeightLabels {
+	sizeTitle?: string,
+	weightTitle?: string,
+	lengthUnit?: string,
+	weightUnit?: string
+}

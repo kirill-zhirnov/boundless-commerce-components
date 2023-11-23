@@ -1,7 +1,7 @@
 import React from 'react';
 import {BoundlessClient, IVwItem, TThumbRatio} from 'boundless-api-client';
 import clsx from 'clsx';
-import ProductImg from './Products/ProductItem/ProductImg';
+import ImgThumb from './ImgThumb';
 import NoImage from './NoImage';
 
 export default function VwItem({item, className, apiClient}: IProps) {
@@ -9,7 +9,7 @@ export default function VwItem({item, className, apiClient}: IProps) {
 		<div className={clsx('bdl-vw-item', className)}>
 			<div className={'bdl-vw-item__img-wrapper'}>
 				{(item.image && apiClient)
-					? <ProductImg image={item.image} apiClient={apiClient} maxSize={100} className={'bdl-vw-item__img'}/>
+					? <ImgThumb image={item.image} apiClient={apiClient} maxSize={100} className={'bdl-vw-item__img'}/>
 					: <NoImage ratio={TThumbRatio['1-1']} /> }
 			</div>
 			<div className={'bdl-vw-item__desc'}>

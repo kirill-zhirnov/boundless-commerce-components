@@ -1,18 +1,18 @@
-import {BoundlessClient, TThumbRatio, IProductListImage} from 'boundless-api-client';
+import {BoundlessClient, TThumbRatio} from 'boundless-api-client';
 import {IProductsListImg} from '../@types/products';
 
-export function getProductImg(
+export function makeThumb(
 	apiClient: BoundlessClient,
-	image: Pick<IProductListImage, 'width' | 'height' | 'path'>,
+	image: {path: string, width?: number|null, height?: number|null},
 	maxSize: number,
-	productImgRatio?: TThumbRatio
+	imgRatio?: TThumbRatio
 ): IProductsListImg {
 	const {width, height, path: imgLocalPath} = image;
 
 	const thumb = apiClient.makeThumb({imgLocalPath, maxSize});
-	if (productImgRatio) {
+	if (imgRatio) {
 		thumb
-			.setRatio(productImgRatio)
+			.setRatio(imgRatio)
 			.setPad(true)
 		;
 	}

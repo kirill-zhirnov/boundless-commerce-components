@@ -1,10 +1,5 @@
 import {IProductPrice} from 'boundless-api-client';
-
-export interface IPriceForTpl {
-	price: number|null,
-	oldPrice?: number|null,
-	isFrom?: boolean
-}
+import {IPriceForTpl} from '../@types/products';
 
 export const getPriceForTpl = (price: IProductPrice|null): IPriceForTpl => {
 	if (!price) {

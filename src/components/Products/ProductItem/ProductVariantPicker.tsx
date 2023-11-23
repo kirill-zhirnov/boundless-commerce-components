@@ -3,7 +3,7 @@ import {IExtendedVariants, IProductVariant, IVariantCombination} from 'boundless
 import clsx from 'clsx';
 import VariantPickerCharacteristic from './ProductVariantPicker/VariantPickerCharacteristic';
 
-export default function ProductVariantPicker({extendedVariants, onChange}: IProps) {
+export default function ProductVariantPicker({extendedVariants, onChange, className}: IProps) {
 	const {characteristics, list, combinations, idCombinations} = extendedVariants;
 	const [value, setValue] = useState<{[characteristicId: number]: number}>({});
 
@@ -29,7 +29,7 @@ export default function ProductVariantPicker({extendedVariants, onChange}: IProp
 	}, [list, value, setValue, combinations]);
 
 	return (
-		<div className={clsx('bdl-variant-picker')}>
+		<div className={clsx('bdl-variant-picker', className)}>
 			{characteristics.map(characteristic => (
 				<VariantPickerCharacteristic characteristic={characteristic}
 																		 key={characteristic.id}
@@ -46,9 +46,9 @@ export default function ProductVariantPicker({extendedVariants, onChange}: IProp
 interface IProps {
 	extendedVariants: IExtendedVariants;
 	onChange?: (value: {[characteristicId: number]: number}, variant?: IProductVariant) => void,
+	className?: string
 }
 
-//@ts-ignore
 const isEqual = (a: string[], b: string[]) => {
 	if (a.length != b.length) {
 		return false;
