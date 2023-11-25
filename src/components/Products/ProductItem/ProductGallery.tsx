@@ -41,7 +41,7 @@ export default function ProductGallery({product, apiClient, onClick, className}:
 				</figcaption>}
 			</figure>
 			<ul className='bdl-product-gallery__thumbs bdl-list-unstyled'>
-				{images.map((image, i) => (
+				{images.map((image, i) =>
 					<li
 						key={image.image.image_id}
 						className={clsx('bdl-product-gallery__thumb', {
