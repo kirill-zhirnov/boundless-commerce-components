@@ -29,7 +29,12 @@ Or via NPM:
 
 ### List of products
 
+[Example of usage](https://github.com/kirill-zhirnov/next-ecommerce-starter-kit/blob/master/app/page.tsx)
+
 ```typescript jsx
+
+import {Products, Product} from 'boundless-commerce-components';
+
 <Products
 	all={{gap: 10, perRow: 2}}
 	lg={{gap: 30, perRow: 4}}
@@ -46,3 +51,56 @@ Or via NPM:
 	)}
 </Products>
 ```
+
+`Products` accepts `all, sm, md, lg, xl, xxl` to determine the number of products per row and the spacing between them.
+
+Product view can be customized by redefining internal components:
+
+```typescript jsx
+<Product
+	components={{
+		image: <div>My own Img view</div>,
+		title: <div>My own Title view</div>,
+		price: <div>My own Price view</div>
+	}}
+/>
+```
+
+### Cart
+
+If you want to use cart hooks you need to wrap the application in `BoundlessCart`.
+
+[Example of usage](https://github.com/kirill-zhirnov/next-ecommerce-starter-kit/blob/master/components/wrapperForCartContext.tsx)
+
+```typescript jsx
+//if you are using NextJS - add client directive:
+'use client';
+
+import {BoundlessCart} from 'boundless-commerce-components/dist/client';
+
+<BoundlessCart apiClient={apiClient}>
+	{children}
+</BoundlessCart>
+```
+
+The wrapper inits the context, retrieves cart_id from the server and saves it in Cookie.
+
+### Cart Hook
+
+```typescript jsx
+const {cartId, addToCart, total} = useCart();
+```
+
+Please see examples of usage:
+
+[Adding to cart](https://github.com/kirill-zhirnov/next-ecommerce-starter-kit/blob/master/components/product/addToCart.tsx)
+
+[Cart Button](https://github.com/kirill-zhirnov/next-ecommerce-starter-kit/blob/master/components/cart/fab.tsx)
+
+[Cart Page](https://github.com/kirill-zhirnov/next-ecommerce-starter-kit/blob/master/components/cart/cartPageBody.tsx)
+
+## Free E-Commerce themes
+
+[Free E-Commerce Themes](https://boundless-commerce.com/templates)
+
+[Subscribe to my Youtube channel](https://www.youtube.com/@jam-stack-ninja)
