@@ -13,19 +13,19 @@ export default function Products({children, className, all, sm, md, lg, xl, xxl}
 		}
 
 		if (md) {
-			out.push(`bdl-products_sm-gap-${md.gap}_per-row-${md.perRow}`);
+			out.push(`bdl-products_md-gap-${md.gap}_per-row-${md.perRow}`);
 		}
 
 		if (lg) {
-			out.push(`bdl-products_sm-gap-${lg.gap}_per-row-${lg.perRow}`);
+			out.push(`bdl-products_lg-gap-${lg.gap}_per-row-${lg.perRow}`);
 		}
 
 		if (xl) {
-			out.push(`bdl-products_sm-gap-${xl.gap}_per-row-${xl.perRow}`);
+			out.push(`bdl-products_xl-gap-${xl.gap}_per-row-${xl.perRow}`);
 		}
 
 		if (xxl) {
-			out.push(`bdl-products_sm-gap-${xxl.gap}_per-row-${xxl.perRow}`);
+			out.push(`bdl-products_xxl-gap-${xxl.gap}_per-row-${xxl.perRow}`);
 		}
 
 		return out;
