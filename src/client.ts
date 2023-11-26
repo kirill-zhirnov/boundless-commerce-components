@@ -17,4 +17,4 @@ export {
 	VariantPickerCharacteristic,
 	CaseItem,
 	ProductGallery
-}
+};

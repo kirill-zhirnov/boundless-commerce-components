@@ -22,7 +22,7 @@ export default function useFormatCurrency({settings}: {settings?: IBasicSettings
 		}
 
 		return currency(amount, currencyOptions).format();
-	}, [settings?.['system.locale']]);
+	}, [settings]);
 
 	return {formatCurrency};
 }

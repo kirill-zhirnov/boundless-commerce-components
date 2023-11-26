@@ -26,7 +26,7 @@ export default function ProductVariantPicker({extendedVariants, onChange, classN
 		if (onChange) {
 			onChange(newValue, variant);
 		}
-	}, [list, value, setValue, combinations]);
+	}, [list, value, setValue, combinations, onChange]);
 
 	return (
 		<div className={clsx('bdl-variant-picker', className)}>
@@ -61,7 +61,7 @@ const isEqual = (a: string[], b: string[]) => {
 	}
 
 	return true;
-}
+};
 
 const findVariantIdByCombinations = (value: {[key: number]: number}, combinations: IVariantCombination): null|string => {
 	const requiredCombinations = Object.entries(value).map(([characteristicId, caseId]) => `${characteristicId}-${caseId}`);

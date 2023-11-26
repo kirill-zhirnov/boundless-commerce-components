@@ -22,7 +22,7 @@ export default function BoundlessCart({children, apiClient, onProductAddedToCart
 				.catch((e) => console.error('Error in getCartByCookieOrRetrieve:', e))
 			;
 		}
-	}, []);
+	}, []);//eslint-disable-line
 
 	return (
 		<CartContext.Provider value={{apiClient, cartId, total, setTotal, onProductAddedToCart, onNeededSelectVariant}}>

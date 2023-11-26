@@ -7,7 +7,7 @@ const defaultLabels = {
 	weightTitle: 'Weight',
 	lengthUnit: 'cm.',
 	weightUnit: 'kg.'
-}
+};
 
 export default function SizeAndWeight({size, labels = defaultLabels}: IProps) {
 	const {weight, width, length, height} = size;

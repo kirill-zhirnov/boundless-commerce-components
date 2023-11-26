@@ -1,6 +1,6 @@
 import {createContext} from 'react';
 import {BoundlessClient, IAddToCartResponse, ICartTotal} from 'boundless-api-client';
-import {Dispatch, SetStateAction} from "react";
+import {Dispatch, SetStateAction} from 'react';
 
 const CartContext = createContext<{
 	apiClient?: BoundlessClient,
