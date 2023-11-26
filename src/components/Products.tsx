@@ -1,9 +1,38 @@
-import React, {ReactNode} from 'react';
+import React, {ReactNode, useMemo} from 'react';
 import clsx from 'clsx';
 
 export default function Products({children, className, all, sm, md, lg, xl, xxl}: IProductsProps) {
+	const gapClasses = useMemo(() => {
+		const out = [];
+		if (all) {
+			out.push(`bdl-products_gap-${all.gap}_per-row-${all.perRow}`);
+		}
+
+		if (sm) {
+			out.push(`bdl-products_sm-gap-${sm.gap}_per-row-${sm.perRow}`);
+		}
+
+		if (md) {
+			out.push(`bdl-products_sm-gap-${md.gap}_per-row-${md.perRow}`);
+		}
+
+		if (lg) {
+			out.push(`bdl-products_sm-gap-${lg.gap}_per-row-${lg.perRow}`);
+		}
+
+		if (xl) {
+			out.push(`bdl-products_sm-gap-${xl.gap}_per-row-${xl.perRow}`);
+		}
+
+		if (xxl) {
+			out.push(`bdl-products_sm-gap-${xxl.gap}_per-row-${xxl.perRow}`);
+		}
+
+		return out;
+	}, [all, sm, md, lg, xl, xxl]);
+
 	return (
-		<div className={clsx('bdl-products', className)}>
+		<div className={clsx('bdl-products', gapClasses, className)}>
 			{children}
 		</div>
 	);

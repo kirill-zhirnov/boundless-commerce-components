@@ -10,7 +10,7 @@ import css from 'rollup-plugin-import-css';
 
 export default {
 	external: ['boundless-api-client', 'react', '@types/react'],
-	input: ['src/index.ts', 'src/cart.ts'],
+	input: ['src/index.ts', 'src/client.ts'],
 	plugins: [
 		json(),
 		nodeResolve({
