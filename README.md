@@ -88,6 +88,10 @@ The wrapper inits the context, retrieves cart_id from the server and saves it in
 ### Cart Hook
 
 ```typescript jsx
+'use client';
+
+import {useCart} from 'boundless-commerce-components/dist/client';
+
 const {cartId, addToCart, total} = useCart();
 ```
 
@@ -98,6 +102,17 @@ Please see examples of usage:
 [Cart Button](https://github.com/kirill-zhirnov/next-ecommerce-starter-kit/blob/master/components/cart/fab.tsx)
 
 [Cart Page](https://github.com/kirill-zhirnov/next-ecommerce-starter-kit/blob/master/components/cart/cartPageBody.tsx)
+
+
+### Customer Hook
+
+```typescript jsx
+'use client';
+
+import {useCustomer} from 'boundless-commerce-components/dist/client';
+
+const {customerAuthToken, setCustomerAuthToken, customer, setCustomer, login, logout, customerIsInited} = useCustomer();
+```
 
 ## Free E-Commerce themes
 

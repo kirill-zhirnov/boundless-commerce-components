@@ -8,6 +8,7 @@ import ProductVariantPicker from './components/Products/ProductItem/ProductVaria
 import VariantPickerCharacteristic from './components/Products/ProductItem/ProductVariantPicker/VariantPickerCharacteristic';
 import CaseItem from './components/Products/ProductItem/ProductVariantPicker/VariantPickerCharacteristic/CaseItem';
 import ProductGallery from './components/Products/ProductItem/ProductGallery';
+import useCustomer from './hooks/useCustomer';
 
 export {
 	CartContext,
@@ -16,5 +17,6 @@ export {
 	ProductVariantPicker,
 	VariantPickerCharacteristic,
 	CaseItem,
-	ProductGallery
+	ProductGallery,
+	useCustomer
 };

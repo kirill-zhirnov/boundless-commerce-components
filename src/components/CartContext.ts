@@ -1,5 +1,5 @@
 import {createContext} from 'react';
-import {BoundlessClient, IAddToCartResponse, ICartTotal} from 'boundless-api-client';
+import {BoundlessClient, IAddToCartResponse, ICartTotal, ICustomer} from 'boundless-api-client';
 import {Dispatch, SetStateAction} from 'react';
 
 const CartContext = createContext<{
@@ -8,7 +8,14 @@ const CartContext = createContext<{
 	total?: ICartTotal,
 	setTotal?: Dispatch<SetStateAction<ICartTotal|undefined>>,
 	onProductAddedToCart?: (result: IAddToCartResponse) => void,
-	onNeededSelectVariant?: (result: IAddToCartResponse) => void
+	onNeededSelectVariant?: (result: IAddToCartResponse) => void,
+	customerAuthToken?: string,
+	setCustomerAuthToken?: Dispatch<SetStateAction<string|undefined>>,
+	customer?: ICustomer,
+	setCustomer?: Dispatch<SetStateAction<ICustomer|undefined>>,
+	login?: (authToken: string, customer: ICustomer) => void;
+	logout?: () => void;
+	customerIsInited?: boolean
 }>({});
 
 export default CartContext;
