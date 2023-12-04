@@ -1,6 +1,10 @@
 {
   "name": "boundless-commerce-components",
   "version": "1.0.6",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/kirill-zhirnov/boundless-commerce-components.git"
+	},
   "author": "Kirill Zhirnov <ekvixgroup@gmail.com>",
   "license": "MIT",
   "private": false,

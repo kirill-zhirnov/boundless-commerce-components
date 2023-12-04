@@ -97,11 +97,11 @@ const {cartId, addToCart, total} = useCart();
 
 Please see examples of usage:
 
-[Adding to cart](https://github.com/kirill-zhirnov/next-ecommerce-starter-kit/blob/master/components/product/addToCart.tsx)
+[Adding to cart](https://github.com/kirill-zhirnov/nextjs-ecommerce-starter-kit/blob/master/components/product/addToCart.tsx)
 
-[Cart Button](https://github.com/kirill-zhirnov/next-ecommerce-starter-kit/blob/master/components/cart/fab.tsx)
+[Cart Button](https://github.com/kirill-zhirnov/nextjs-ecommerce-starter-kit/blob/master/components/cart/fab.tsx)
 
-[Cart Page](https://github.com/kirill-zhirnov/next-ecommerce-starter-kit/blob/master/components/cart/cartPageBody.tsx)
+[Cart Page](https://github.com/kirill-zhirnov/nextjs-ecommerce-starter-kit/blob/master/components/cart/cartBody.tsx)
 
 
 ### Customer Hook
@@ -113,6 +113,10 @@ import {useCustomer} from 'boundless-commerce-components/dist/client';
 
 const {customerAuthToken, setCustomerAuthToken, customer, setCustomer, login, logout, customerIsInited} = useCustomer();
 ```
+
+Please see examples of usage:
+
+[Login Example](https://github.com/kirill-zhirnov/nextjs-ecommerce-starter-kit/blob/master/components/auth/loginForm.tsx#L59)
 
 ## Free E-Commerce themes
 
