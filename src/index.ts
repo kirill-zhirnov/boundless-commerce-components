@@ -9,7 +9,7 @@ import {IBasicSettings} from './@types/settings';
 import useFormatCurrency from './hooks/useFormatCurrency';
 import VwItem from './components/VwItem';
 import {IPriceForTpl} from './@types/products';
-import {getPriceForTpl} from './lib/product';
+import {getPriceForTpl, findSellingPrice, findPriceByAlias} from './lib/product';
 import ProductAttrs from './components/Products/ProductItem/ProductAttrs';
 import ManufacturerCharacteristic from './components/Products/ProductItem/ProductAttrs/ManufacturerCharacteristic';
 import ImgThumb from './components/ImgThumb';
@@ -31,5 +31,7 @@ export {
 	useFormatCurrency,
 	IBasicSettings,
 	IPriceForTpl,
-	getPriceForTpl
+	getPriceForTpl,
+	findSellingPrice,
+	findPriceByAlias
 };

@@ -1,6 +1,6 @@
 import React, {MouseEvent, useCallback, useMemo} from 'react';
 import clsx from 'clsx';
-import {IProductVariant, IVariantCharacteristic, IVariantIdCombinations} from 'boundless-api-client';
+import {IVariant, IVariantCharacteristic, IVariantIdCombinations} from 'boundless-api-client';
 import {findAvailableVariants} from '../../../../../lib/variant';
 
 export default function CaseItem({characteristic, caseItem, onSelectCase, value, variants, idCombinations}: IProps) {
@@ -58,5 +58,5 @@ interface IProps {
 	onSelectCase: (characteristicId: number, caseId: number|null) => void;
 	value: {[characteristicId: number|string]: number};
 	idCombinations: IVariantIdCombinations;
-	variants: IProductVariant[]
+	variants: IVariant[]
 }

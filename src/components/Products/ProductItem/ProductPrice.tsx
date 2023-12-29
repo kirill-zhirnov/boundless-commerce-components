@@ -1,11 +1,11 @@
 import React from 'react';
-import {IProductPrice} from 'boundless-api-client';
+import {IFinalPrice} from 'boundless-api-client';
 import {getPriceForTpl} from '../../../lib/product';
 import useFormatCurrency from '../../../hooks/useFormatCurrency';
 import clsx from 'clsx';
 import {IBasicSettings} from '../../../@types/settings';
 
-export default function ProductPrice({price, className, settings, textFrom = 'From:'}: {price: IProductPrice, settings?: IBasicSettings, className?: string, textFrom?: string}) {
+export default function ProductPrice({price, className, settings, textFrom = 'From:'}: {price: IFinalPrice, settings?: IBasicSettings, className?: string, textFrom?: string}) {
 	const tplPrice = getPriceForTpl(price);
 	const {formatCurrency} = useFormatCurrency({settings});
 

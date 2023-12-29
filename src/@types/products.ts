@@ -15,8 +15,8 @@ export interface IProductsListImg {
 }
 
 export interface IPriceForTpl {
-	price: number|null,
-	oldPrice?: number|null,
+	price: string|null,
+	oldPrice?: string|null,
 	isFrom?: boolean
 }
 

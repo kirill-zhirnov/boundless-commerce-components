@@ -1,4 +1,4 @@
-import {IProductVariant, IVariantCharacteristic, IVariantIdCombinations} from 'boundless-api-client';
+import {IVariant, IVariantCharacteristic, IVariantIdCombinations} from 'boundless-api-client';
 import React from 'react';
 import CaseItem from './VariantPickerCharacteristic/CaseItem';
 
@@ -28,5 +28,5 @@ interface IVariantCharProps {
 	value: {[characteristicId: number|string]: number};
 	onSelectCase: (characteristicId: number, caseId: number|null) => void;
 	idCombinations: IVariantIdCombinations;
-	variants: IProductVariant[]
+	variants: IVariant[]
 }

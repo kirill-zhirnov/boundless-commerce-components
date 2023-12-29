@@ -1,5 +1,5 @@
 import React, {useState, useCallback} from 'react';
-import {IExtendedVariants, IProductVariant, IVariantCombination} from 'boundless-api-client';
+import {IExtendedVariants, IVariant, IVariantCombination} from 'boundless-api-client';
 import clsx from 'clsx';
 import VariantPickerCharacteristic from './ProductVariantPicker/VariantPickerCharacteristic';
 
@@ -17,7 +17,7 @@ export default function ProductVariantPicker({extendedVariants, onChange, classN
 
 		setValue(newValue);
 
-		let variant: IProductVariant|undefined;
+		let variant: IVariant|undefined;
 		const variantId = findVariantIdByCombinations(newValue, combinations);
 		if (variantId) {
 			variant = list.find(({variant_id}) => String(variant_id) == variantId);
@@ -45,7 +45,7 @@ export default function ProductVariantPicker({extendedVariants, onChange, classN
 
 interface IProps {
 	extendedVariants: IExtendedVariants;
-	onChange?: (value: {[characteristicId: number]: number}, variant?: IProductVariant) => void,
+	onChange?: (value: {[characteristicId: number]: number}, variant?: IVariant) => void,
 	className?: string
 }
 

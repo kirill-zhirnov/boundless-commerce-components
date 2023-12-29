@@ -6,8 +6,11 @@ import ProductListImage from './ProductItem/ProductListImage';
 import ProductLink from './ProductItem/ProductLink';
 import ProductPrice from './ProductItem/ProductPrice';
 import {IBasicSettings} from '../../@types/settings';
+import {findSellingPrice} from '../../lib/product';
 
 export default function Product({product, className, link, components, apiClient, settings}: IProductProps) {
+	const sellingPrice = findSellingPrice(product.prices);
+
 	return (
 		<div
 			className={clsx('bdl-product', {
@@ -34,9 +37,9 @@ export default function Product({product, className, link, components, apiClient
 				{components?.price
 					? components?.price
 					: <div className='bdl-product__offer'>
-						{product.price &&
+						{sellingPrice &&
 						<ProductPrice
-							price={product.price}
+							price={sellingPrice}
 							settings={settings}
 							className={'bdl-product__price'}
 						/>}

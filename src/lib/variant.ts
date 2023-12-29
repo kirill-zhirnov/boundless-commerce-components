@@ -1,6 +1,6 @@
-import {IProductVariant, IVariantIdCombinations} from 'boundless-api-client';
+import {IVariant, IVariantIdCombinations} from 'boundless-api-client';
 
-export const findAvailableVariants = (variants: IProductVariant[], idCombinations: IVariantIdCombinations, value: {[characteristicId: number|string]: number}): IProductVariant[] => {
+export const findAvailableVariants = (variants: IVariant[], idCombinations: IVariantIdCombinations, value: {[characteristicId: number|string]: number}): IVariant[] => {
 	const variantIds: number[] = [];
 
 	for (const [variantId, combination] of Object.entries(idCombinations)) {
