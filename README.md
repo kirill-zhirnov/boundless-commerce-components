@@ -17,6 +17,10 @@ directive. [Read more about Client components in Next.js](https://nextjs.org/doc
 API’s First Headless E-commerce CMS: We Provide An Admin-Side For Store Management, Powerful API, And Ready-To-Use
 Checkout Area.
 
+#### Self-Hosted solution
+
+There is an option for Running Boundless-Commerce on your own server. Read more at [Open-Source Headless eCommerce Platform](https://boundless-commerce.com/open-source)
+
 ## Installation
 
 `yarn add boundless-commerce-components`
