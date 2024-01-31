@@ -29,18 +29,6 @@ export default function BoundlessCart({children, apiClient, onProductAddedToCart
 	//resetCart func?
 
 	useEffect(() => {
-		if (!cartId && !isCartRequested.current) {
-			isCartRequested.current = true;
-
-			getCartByCookieOrRetrieve(apiClient)
-				.then(({id, total}) => {
-					setTotal(total);
-					setCartId(id);
-				})
-				.catch((e) => console.error('Error in getCartByCookieOrRetrieve:', e))
-			;
-		}
-
 		if (!customer && !isCustomerRequested.current) {
 			isCustomerRequested.current = true;
 
@@ -56,10 +44,25 @@ export default function BoundlessCart({children, apiClient, onProductAddedToCart
 		}
 	}, []);//eslint-disable-line
 
+	useEffect(() => {
+		if (customerIsInited && !cartId && !isCartRequested.current) {
+			isCartRequested.current = true;
+
+			getCartByCookieOrRetrieve(apiClient, customerAuthToken)
+				.then(({id, total}) => {
+					setTotal(total);
+					setCartId(id);
+				})
+				.catch((e) => console.error('Error in getCartByCookieOrRetrieve:', e))
+			;
+		}
+	}, [customerIsInited]);//eslint-disable-line
+
 	return (
 		<CartContext.Provider value={{
 			apiClient,
 			cartId,
+			setCartId,
 			total,
 			setTotal,
 			onProductAddedToCart,

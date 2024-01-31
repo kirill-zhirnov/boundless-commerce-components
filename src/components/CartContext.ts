@@ -5,6 +5,7 @@ import {Dispatch, SetStateAction} from 'react';
 const CartContext = createContext<{
 	apiClient?: BoundlessClient,
 	cartId?: string,
+	setCartId?: Dispatch<SetStateAction<string|undefined>>,
 	total?: ICartTotal,
 	setTotal?: Dispatch<SetStateAction<ICartTotal|undefined>>,
 	onProductAddedToCart?: (result: IAddToCartResponse) => void,

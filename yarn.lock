@@ -1518,10 +1518,10 @@ binary-extensions@^2.0.0:
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-2.2.0.tgz#75f502eeaf9ffde42fc98829645be4ea76bd9e2d"
   integrity sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==
 
-boundless-api-client@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/boundless-api-client/-/boundless-api-client-0.3.0.tgz#50bf4407353b368c00ef2a0628ac7799ec7c9184"
-  integrity sha512-TGapc2dCy+MTQdo0vKJJaofnqUM2/7BtYOgJgS/oMz6SokgzFPEg3cgpGzM1nNo2Fa80DxeNZovt64jPupF8gQ==
+boundless-api-client@^0.3.4:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/boundless-api-client/-/boundless-api-client-0.3.4.tgz#aff04afbae7e69d72bf3ff1085b2852b30b32463"
+  integrity sha512-6/s8HZ8N74iDTCVlN+Ax3nuoZv9DFHoR1eMpDomhO36cbjA7U7ZVI444BKHebj6DwG6jhzho/GXMSmfbFdoufw==
   dependencies:
     axios "0"
     jsonwebtoken "^9.0.2"
