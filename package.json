@@ -1,6 +1,6 @@
 {
   "name": "boundless-commerce-components",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kirill-zhirnov/boundless-commerce-components.git"
@@ -10,6 +10,7 @@
   "private": false,
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "type": "module",
   "files": [
     "dist"
   ],
