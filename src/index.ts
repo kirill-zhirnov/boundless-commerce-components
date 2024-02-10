@@ -15,6 +15,7 @@ import ManufacturerCharacteristic from './components/Products/ProductItem/Produc
 import ImgThumb from './components/ImgThumb';
 import SizeAndWeight from './components/Products/ProductItem/ProductAttrs/SizeAndWeight';
 import NoImage from './components/NoImage';
+import {findAvailableVariants, isValueSuitsCombination} from './lib/variant';
 
 export {
 	Products,
@@ -33,5 +34,7 @@ export {
 	IPriceForTpl,
 	getPriceForTpl,
 	findSellingPrice,
-	findPriceByAlias
+	findPriceByAlias,
+	findAvailableVariants,
+	isValueSuitsCombination
 };
